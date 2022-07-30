@@ -3,7 +3,7 @@ import Slider from "./components/slider/Slider";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "black" }}>
+    <div className='App'>
       <Slider />
     </div>
   );

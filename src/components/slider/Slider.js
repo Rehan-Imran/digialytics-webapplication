@@ -5,7 +5,15 @@ import "./Slider.scss";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [offset, setOffset] = useState(0);
   const slideLength = sliderData.length;
+
+  window.addEventListener("scroll", function (event) {
+    const doc = document.documentElement;
+    // const left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    setOffset(top);
+  });
 
   const openNav = () => {
     document.getElementById("mySidebar").style.width = "250px";
@@ -52,17 +60,30 @@ const Slider = () => {
 
   return (
     <div>
-      <div className='company_title'>
-        <div>
+      <div className={`company_title ${offset !== 0 && "navbar_background"}`}>
+        <div style={{ marginTop: "20px" }}>
           <h2>Digialytics</h2>
         </div>
-        <div className='navbar'>
-          <h4>ABOUT US</h4>
-          <h4>OUR CLIENTS</h4>
-          <h4>CONTACT US</h4>
-          <h4>METHODOLOIES</h4>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            maxWidth: "700px",
+          }}
+        >
+          <div className='navbar'>
+            <h4>ABOUT US</h4>
+            <h4>OUR CLIENTS</h4>
+            <h4>CONTACT US</h4>
+            <h4>METHODOLOIES</h4>
+          </div>
+          <div className='get_a_quote'>
+            <button>GET A QUOTE</button>
+          </div>
         </div>
       </div>
+      <div></div>
+
       <div id='mySidebar' className='sidebar'>
         <h4 className='closebtn' onClick={() => closeNav()}>
           ×
