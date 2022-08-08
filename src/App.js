@@ -1,11 +1,12 @@
 import "./App.scss";
-import Slider from "./components/slider/Slider";
+import Slider from "./components/Slider/Slider";
+import Separater from "./components/Separater/separater";
 
 function App() {
   return (
     <div className='App'>
       <Slider />
-      <div className='separater' />
+      <Separater />
     </div>
   );
 }
