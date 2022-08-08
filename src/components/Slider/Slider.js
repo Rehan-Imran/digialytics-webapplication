@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { sliderData } from "../../slider-data";
+import Header from "../Header/header";
 import "./Slider.scss";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [offset, setOffset] = useState(0);
   const slideLength = sliderData.length;
+
+  window.addEventListener("scroll", function (event) {
+    const doc = document.documentElement;
+    // const left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    setOffset(top);
+  });
 
   const openNav = () => {
     document.getElementById("mySidebar").style.width = "250px";
@@ -52,31 +61,7 @@ const Slider = () => {
 
   return (
     <div>
-      <div className='company_title'>
-        <div>
-          <h2>Digialytics</h2>
-        </div>
-        <div className='navbar'>
-          <h4>ABOUT US</h4>
-          <h4>OUR CLIENTS</h4>
-          <h4>CONTACT US</h4>
-          <h4>METHODOLOIES</h4>
-        </div>
-      </div>
-      <div id='mySidebar' className='sidebar'>
-        <h4 className='closebtn' onClick={() => closeNav()}>
-          ×
-        </h4>
-        <h4 href='#'>About</h4>
-        <h4 href='#'>Services</h4>
-        <h4 href='#'>Clients</h4>
-        <h4 href='#'>Contact</h4>
-      </div>
-      <div id='main' className='main'>
-        <button className='openbtn' onClick={() => openNav()}>
-          ☰
-        </button>
-      </div>
+      <Header />
       <div className='cover_image_pagination'>
         {sliderData.map((item, index) => (
           <button

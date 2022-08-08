@@ -1,0 +1,250 @@
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 201;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar h4 {
+  padding: 8px 8px 8px 32px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar h4:hover {
+  color: #1a7d7c;
+  border-bottom: 3px solid #1a7d7c;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .closebtn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+}
+
+.openbtn {
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  z-index: 200;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-right 0.5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.navbar {
+  display: flex;
+  margin-top: 20px;
+  margin-right: 40px;
+  align-items: center;
+  min-width: 500px;
+  justify-content: space-between;
+}
+
+.get_a_quote {
+  padding-right: 20px;
+  button {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+    background-color: #fff;
+  }
+  button:hover {
+    background-color: #1a7d7c;
+    color: white;
+  }
+}
+
+.navbar_background {
+  background-color: #111;
+  transition: all 1s ease;
+}
+
+.company_title {
+  position: fixed;
+  display: flex;
+  min-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  padding-left: 30px;
+  // background-color: black;
+  // padding: 20px;
+  h2 {
+    color: white;
+  }
+  h4 {
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+  }
+  h4:hover {
+    color: #1a7d7c;
+    border-bottom: 3px solid #1a7d7c;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  @media screen and (max-width: 1000px) {
+    .navbar {
+      display: none;
+    }
+    .get_a_quote {
+      margin-right: 60px;
+    }
+  }
+}
+
+.cover_image_pagination {
+  position: absolute;
+  z-index: 100;
+  width: 70px;
+  bottom: 50px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(50%);
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 1021px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slide img {
+  // width: 100%;
+  height: 100%;
+}
+
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.content {
+  position: absolute;
+  top: 23rem;
+  left: 5rem;
+  opacity: 0;
+  width: 50%;
+  color: #fff;
+  padding: 3rem;
+  // background: rgba(0, 0, 0, 0.3);
+  animation: slide-up 2s ease 0.5s;
+  // animation-delay: 1s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    top: 23rem;
+  }
+  100% {
+    visibility: visible;
+    top: 17rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+.content > * {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.current .content {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+.arrow {
+  border: 2px solid white;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+}
+.arrow:hover {
+  background-color: #fff;
+  color: #777;
+}
+
+.next {
+  top: 35%;
+  right: 1.5rem;
+}
+.prev {
+  top: 35%;
+  left: 1.5rem;
+}
+
+hr {
+  height: 2px;
+  background: white;
+  width: 50%;
+}

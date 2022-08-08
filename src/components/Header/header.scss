@@ -2,7 +2,7 @@
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 201;
   top: 0;
   right: 0;
   background-color: #111;
@@ -38,8 +38,8 @@
 .openbtn {
   position: fixed;
   right: 20px;
-  top: 20px;
-  z-index: 1;
+  top: 15px;
+  z-index: 200;
   font-size: 20px;
   cursor: pointer;
   background-color: #111;
@@ -58,9 +58,6 @@
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
   .sidebar a {
     font-size: 18px;
   }
@@ -68,20 +65,41 @@
 
 .navbar {
   display: flex;
+  margin-top: 20px;
+  margin-right: 40px;
   align-items: center;
   min-width: 500px;
   justify-content: space-between;
 }
 
+.get_a_quote {
+  padding-right: 20px;
+  button {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+    background-color: #fff;
+  }
+  button:hover {
+    background-color: #1a7d7c;
+    color: white;
+  }
+}
+
+.navbar_background {
+  background-color: #111;
+  transition: all 1s ease;
+}
+
 .company_title {
   position: fixed;
   display: flex;
-  min-width: 95%;
+  min-width: 100%;
   align-items: center;
   justify-content: space-between;
   z-index: 100;
-  margin-top: 30px;
-  margin-left: 30px;
+  padding-left: 30px;
   // background-color: black;
   // padding: 20px;
   h2 {
@@ -98,9 +116,12 @@
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1000px) {
     .navbar {
       display: none;
+    }
+    .get_a_quote {
+      margin-right: 60px;
     }
   }
 }
@@ -177,7 +198,7 @@
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .main {
     display: none;
   }
