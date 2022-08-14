@@ -18,8 +18,6 @@ export default function ContactUs() {
           <div>
             <h1>CONTACT US</h1>
           </div>
-        </div>
-        <div className='center_align_div'>
           <div className=' form'>
             <div className='center_align_div'>
               <h2>REQUEST CALLBACK</h2>
@@ -62,6 +60,49 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+        {/* <div className='center_align_div'>
+          <div className=' form'>
+            <div className='center_align_div'>
+              <h2>REQUEST CALLBACK</h2>
+            </div>
+            <div>
+              <input
+                className='form-control'
+                type='text'
+                placeholder='Full Name *'
+                required
+              />
+            </div>
+            <div>
+              <input
+                className='form-control'
+                type='email'
+                placeholder='Email *'
+                required
+              />
+            </div>
+            <div className={`input_wrapper input_tel_wrapper `}>
+              <ReactPhoneInput
+                inputClass='phone_input_field'
+                id='my-input'
+                defaultCountry='pk'
+                enableAreaCodeStretch
+                value={number}
+              />
+            </div>
+            <div className='input_wrapper'>
+              <textarea
+                className='block'
+                type='text'
+                placeholder='Message *'
+                required
+              />
+            </div>
+            <div className='submit'>
+              <button>SUBMIT</button>
+            </div>
+          </div>
+        </div> */}
         {/* <div className='column form'>
           <h2>FOUNDERS</h2>
           <div className='founders'>
