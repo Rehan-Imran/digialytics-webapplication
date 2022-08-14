@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { sliderData } from "../../slider-data";
 import "./header.scss";
 
-const Header = () => {
+const Header = (props) => {
   const [offset, setOffset] = useState(0);
 
   window.addEventListener("scroll", function (event) {
@@ -25,9 +26,17 @@ const Header = () => {
 
   return (
     <div>
-      <div className={`company_title ${offset !== 0 && "navbar_background"}`}>
+      <div
+        className={`company_title ${
+          !props.background
+            ? offset !== 0 && "navbar_background_teal "
+            : "navbar_background_teal "
+        }`}
+      >
         <div style={{ marginTop: "20px" }}>
-          <h2>Digialytics</h2>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <h2>Digialytics</h2>
+          </Link>
         </div>
         <div
           style={{
@@ -39,7 +48,9 @@ const Header = () => {
           <div className='navbar'>
             <h4>ABOUT US</h4>
             <h4>OUR CLIENTS</h4>
-            <h4>CONTACT US</h4>
+            <Link to={"/contactus"} style={{ textDecoration: "none" }}>
+              <h4>CONTACT US</h4>
+            </Link>
             <h4>METHODOLOIES</h4>
           </div>
           <div className='get_a_quote'>

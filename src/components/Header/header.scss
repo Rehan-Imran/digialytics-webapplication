@@ -5,7 +5,7 @@
   z-index: 201;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: #1a7d7c;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -21,8 +21,8 @@
 }
 
 .sidebar h4:hover {
-  color: #1a7d7c;
-  border-bottom: 3px solid #1a7d7c;
+  color: black;
+  border-bottom: 3px solid black;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -82,13 +82,18 @@
     background-color: #fff;
   }
   button:hover {
-    background-color: #1a7d7c;
+    background-color: black;
     color: white;
   }
 }
 
 .navbar_background {
   background-color: #111;
+  transition: all 1s ease;
+}
+
+.navbar_background_teal {
+  background-color: #1a7d7c;
   transition: all 1s ease;
 }
 
@@ -111,8 +116,8 @@
     color: white;
   }
   h4:hover {
-    color: #1a7d7c;
-    border-bottom: 3px solid #1a7d7c;
+    color: black;
+    border-bottom: 3px solid black;
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
   }
