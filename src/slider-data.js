@@ -1,17 +1,17 @@
 export const sliderData = [
   {
-    image: "https://i.ibb.co/58Mq6Mb/slide1.jpg",
-    heading: "Slide One",
-    desc: "This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+    image: "slide1.jpeg",
+    heading: "Innovation",
+    desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
   },
   {
-    image: "https://i.ibb.co/8gwwd4Q/slide2.jpg",
-    heading: "Slide Two",
-    desc: "This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+    image: "slide2.jpeg",
+    heading: "Excellence",
+    desc: "We can improve customers’ experience with our skillset. We can automate existing solutions and also          build new solutions from scratch for better user experience."  
   },
   {
-    image: "https://i.ibb.co/8r7WYJh/slide3.jpg",
-    heading: "Slide Three",
-    desc: "This is the description of slide three Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+    image: "slide3.jpeg",
+    heading: "Reliability",
+    desc: "We can solve problems which cannot be solved via traditional software development. We can integrate AI and ML to your programs to improve the efficiency and quality of your product.",
   },
 ];
