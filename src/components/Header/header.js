@@ -51,7 +51,9 @@ const Header = (props) => {
             <Link to={"/contactus"} style={{ textDecoration: "none" }}>
               <h4>CONTACT US</h4>
             </Link>
-            <h4>METHODOLOIES</h4>
+            <Link to={"/methodoligies"} style={{ textDecoration: "none" }}>
+              <h4>METHODOLOIES</h4>
+            </Link>
           </div>
           <div className='get_a_quote'>
             <button>GET A QUOTE</button>
