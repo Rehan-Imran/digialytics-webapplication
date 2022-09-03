@@ -17,7 +17,8 @@ export default function ContactUs() {
         <div className='contact_us_divider'>
           <div>
             <h1>CONTACT US</h1>
-            <h2>Do you have any questions in mind? Sure, let’s talk</h2>
+            <h2>Do you have any questions in mind? </h2>
+            <h2>Sure, let’s talk</h2>
           </div>
           <div className=' form'>
             <div className='center_align_div'>
