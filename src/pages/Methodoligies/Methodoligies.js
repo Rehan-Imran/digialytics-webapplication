@@ -1,5 +1,6 @@
 import Header from "../../components/Header/header";
 import Section from "../../components/SectionDesign/Section";
+import Separater from "../../components/Separater/separater";
 import SectionText from "../../components/SectionDesignText/Section";
 import { sliderData } from "../../slider-data";
 import "./Methodoligies.scss";
@@ -9,19 +10,28 @@ function Methodoligies() {
     <>
       <Header background={true} />
       <Section
+        view='left'
         section='view1'
         img={sliderData[0].image}
-        title='Virtual Try On – A tap and try virtual shopping experience'
+        title='OUR DOMAIN'
+        description='Our goal is to automate and improve existing systems in place. We can employ our skillset to provide   solutions in multiple domains.   '
       />
-      <SectionText
+      <Separater
+        title='Finance'
+        description='We can help the investors to make smart data driven decisions. This is how we can achieve that'
+      />
+
+      <Section
+        view='right'
         section='view'
-        title='The Challenge'
-        paragraph='Our client approached us to create a tool for online shoppers, that would help them instantly visualize their online shopping experience. 
-
-We could think of no better way than computer vision in amalgamation with augmented reality to create the best solution, and that is exactly what we did. 
-
-We created Virtual Try-On – A tool, designed to integrate with any eCommerce platform and capable of helping people visualize wearing any product. A perfect virtual try on!
-'
+        img={sliderData[0].image}
+        points={[
+          "●	Stock Market Behavior Prediction",
+          "●	Market Trends Prediction",
+          "●	Risk Prediction",
+          "●	Value Prediction",
+          "●	Value Chain Analysis",
+        ]}
       />
     </>
   );

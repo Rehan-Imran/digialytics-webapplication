@@ -47,17 +47,16 @@ const Header = (props) => {
         >
           <div className='navbar'>
             <h4>ABOUT US</h4>
-            <h4>OUR CLIENTS</h4>
-            <Link to={"/contactus"} style={{ textDecoration: "none" }}>
-              <h4>CONTACT US</h4>
-            </Link>
+            <h4>OUR DOMAINS</h4>
             <Link to={"/methodoligies"} style={{ textDecoration: "none" }}>
-              <h4>METHODOLOIES</h4>
+              <h4>OUR SOLUTIONS</h4>
             </Link>
           </div>
-          <div className='get_a_quote'>
-            <button>GET A QUOTE</button>
-          </div>
+          <Link to={"/contactus"} style={{ textDecoration: "none" }}>
+            <div className='get_a_quote'>
+              <button>CONTACT US</button>
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -65,10 +64,9 @@ const Header = (props) => {
         <h4 className='closebtn' onClick={() => closeNav()}>
           ×
         </h4>
-        <h4>About</h4>
-        <h4>Services</h4>
-        <h4>Clients</h4>
-        <h4>Contact</h4>
+        <h4>About US</h4>
+        <h4>OUR SOLUTIONS</h4>
+        <h4>OUR DOMAINS</h4>
       </div>
       <div id='main' className='main'>
         <button className='openbtn' onClick={() => openNav()}>

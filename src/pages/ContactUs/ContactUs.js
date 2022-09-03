@@ -16,12 +16,12 @@ export default function ContactUs() {
       <div>
         <div className='contact_us_divider'>
           <div>
-              <h1>CONTACT US</h1>
-              <h2>Do you have any questions in mind? Sure, let’s talk</h2>
+            <h1>CONTACT US</h1>
+            <h2>Do you have any questions in mind? Sure, let’s talk</h2>
           </div>
           <div className=' form'>
             <div className='center_align_div'>
-              <h2>REQUEST CALLBACK</h2>
+              <h3>REQUEST CALLBACK</h3>
             </div>
             <div>
               <input
