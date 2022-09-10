@@ -4,7 +4,7 @@ import ReactPhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./ContactUs.scss";
 // const fetch =require('node-fetch'); 
-const axios = require("axios"); 
+// const axios = require("axios");
 
 class ContactUs extends Component {
    constructor(props) {
@@ -25,7 +25,7 @@ class ContactUs extends Component {
      console.log();
 
      let uuid = Math.random();
-     var axios = require('axios');
+     // var axios = require('axios');
      var data = {
        collection: "Task",
        database: "todo",
@@ -40,7 +40,7 @@ class ContactUs extends Component {
     };
   
 
-  const url = 'https://data.mongodb-api.com/app/data-gltzg/endpoint/data/v1/action/insertOne'; 
+  const url = 'http://data.mongodb-api.com/app/data-gltzg/endpoint/data/v1/action/insertOne'; 
   // var config = {
   //   headers: {
   //     'Content-Type': 'application/json',
@@ -64,7 +64,8 @@ class ContactUs extends Component {
         },
 
         body: data // body data type must match "Content-Type" header
-    }).then((response) => { console.log(response.json()) } );
+    }).then((response) => { console.log(response.json()) } )
+    .catch((error) => console.log(error));
 
   return; 
   }
