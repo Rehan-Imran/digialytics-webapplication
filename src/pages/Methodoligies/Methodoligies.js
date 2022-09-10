@@ -1,7 +1,8 @@
 import Header from "../../components/Header/header";
 import Section from "../../components/SectionDesign/Section";
 import Separater from "../../components/Separater/separater";
-import SectionText from "../../components/SectionDesignText/Section";
+import TickMark from "../../components/TickMark/tickmark";
+import UserCards from "../../components/UserCards/userCards";
 import { sliderData } from "../../slider-data";
 import "./Methodoligies.scss";
 
@@ -33,6 +34,21 @@ function Methodoligies() {
           "●	Value Chain Analysis",
         ]}
       />
+      {/* <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: "400px",
+        }}
+      >
+        <UserCards
+          img={sliderData[0].image}
+          name={"Rehan Imran"}
+          designation={"Software Engineer"}
+        />
+        <TickMark />
+      </div> */}
     </>
   );
 }

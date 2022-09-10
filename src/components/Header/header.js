@@ -47,10 +47,10 @@ const Header = (props) => {
         >
           <div className='navbar'>
             <h4>ABOUT US</h4>
-            <h4>OUR DOMAINS</h4>
             <Link to={"/methodoligies"} style={{ textDecoration: "none" }}>
-              <h4>OUR SOLUTIONS</h4>
+              <h4>OUR DOMAINS</h4>
             </Link>
+            <h4>OUR SOLUTIONS</h4>
           </div>
           <Link to={"/contactus"} style={{ textDecoration: "none" }}>
             <div className='get_a_quote'>
