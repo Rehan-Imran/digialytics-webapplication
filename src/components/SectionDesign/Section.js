@@ -9,22 +9,35 @@ function Section(props) {
         >
           <div>
             <h1>{props.title}</h1>
-            <p>{props.description}</p>
+            { props.overRide === '1' ? (
+                        <p>{props.points.map((item) => (<p className="overRide">{item}</p>))}</p>
+                    ) :
+                        <p>{props.description}</p>
+            }
           </div>
-          <img src={props.img} />
+          { props.overRide === '0' && <img src={props.img}/>}
         </div>
       ) : (
         <div
-          className={props.section !== "view" ? "sectionone" : "sectiononecopy"}
+          className={`sectiononecopy ${props.imgside == 'left' ? 'leftImage' : 'rightImage' }`}
         >
-          <img src={props.img} />
+          {
+            props.imgside === "left" &&
+              <img src={props.img} />
+          }
+
           <div>
             <h1>{props.title}</h1>
-            <p>{props.description}</p>
+            <p >{props.description}</p>
             {props.points.map((item) => (
               <p>{item}</p>
             ))}
           </div>
+
+          {
+              props.imgside === "right" &&
+              <img src={props.img} />
+          }
         </div>
       )}
     </div>
