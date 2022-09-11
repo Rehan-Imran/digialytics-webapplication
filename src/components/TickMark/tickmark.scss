@@ -1,3 +1,20 @@
+.tick_background {
+  margin-top: 20px;
+  background-color: rgb(27, 128, 128);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.tick-mark {
+  margin-top: 3px;
+  margin-left: 1.5px;
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
 .tick-mark::before {
   position: absolute;
   left: 0;

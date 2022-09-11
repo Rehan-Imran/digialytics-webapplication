@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import HoverDropdown from "../HoverDropdown/hoverdropdown";
 // import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 // import { sliderData } from "../../slider-data";
 import "./header.scss";
@@ -46,15 +47,16 @@ const Header = (props) => {
           }}
         >
           <div className='navbar'>
-            <Link to={"/aboutus"} style={{ textDecoration: "none"}}>
+            <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
               <h4>ABOUT US</h4>
             </Link>
             <Link to={"/ourdomain"} style={{ textDecoration: "none" }}>
               <h4>OUR DOMAIN</h4>
             </Link>
-            <Link to={"/oursolutions"} style={{ textDecoration: "none" }}>
+            {/* <Link to={"/oursolutions"} style={{ textDecoration: "none" }}>
               <h4>OUR SOLUTIONS</h4>
-            </Link>
+            </Link> */}
+            <HoverDropdown />
           </div>
           <Link to={"/contactus"} style={{ textDecoration: "none" }}>
             <div className='get_a_quote'>
@@ -69,7 +71,8 @@ const Header = (props) => {
           ×
         </h4>
         <h4>About US</h4>
-        <h4>OUR SOLUTIONS</h4>
+
+        <HoverDropdown />
         <h4>OUR DOMAINS</h4>
       </div>
       <div id='main' className='main'>
