@@ -6,7 +6,6 @@ function Home() {
   return (
     <div className='App'>
       <Slider />
-      <Separater />
     </div>
   );
 }

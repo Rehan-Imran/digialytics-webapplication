@@ -28,23 +28,22 @@
 
 .sectiononecopy {
   display: flex;
-  align-items: center;
-  justify-content: left;
-  padding: 5% 5% 5% 5%;
+
   h1 {
     margin-left: 20px;
     color: black;
     animation: slide-up-to 5s;
   }
   p {
-    margin-top: 50px;
-    margin-left: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
     font-size: 25px;
     font-weight: bold;
     animation: slide-up-to 10s;
   }
   img {
-    width: 50%;
+    width: 800px;
+    border-radius: 30px;
   }
   @keyframes slide-up-to {
     from {
@@ -54,4 +53,31 @@
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 900px) {
+    img {
+      display: none;
+    }
+  }
+}
+
+.rightImage {
+  justify-content: center;
+  padding: 5% 5% 5% 5%;
+  img {
+    margin-left: 150px;
+  }
+  color: black;
+}
+.leftImage {
+  justify-content: center;
+  padding: 5% 5% 5% 5%;
+}
+
+.overRide {
+  font-size: 50px !important;
+  font-family: bold;
+  white-space: pre-wrap !important;
+  color: white !important;
+  animation: slide-up-to 10s !important;
 }

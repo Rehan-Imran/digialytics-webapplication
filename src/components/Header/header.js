@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { sliderData } from "../../slider-data";
+import HoverDropdown from "../HoverDropdown/hoverdropdown";
+// import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+// import { sliderData } from "../../slider-data";
 import "./header.scss";
 
 const Header = (props) => {
   const [offset, setOffset] = useState(0);
 
-  window.addEventListener("scroll", function (event) {
+  window.addEventListener("scroll", function () {
     const doc = document.documentElement;
     // const left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
     const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
@@ -46,11 +47,16 @@ const Header = (props) => {
           }}
         >
           <div className='navbar'>
-            <h4>ABOUT US</h4>
-            <h4>OUR DOMAINS</h4>
-            <Link to={"/methodoligies"} style={{ textDecoration: "none" }}>
-              <h4>OUR SOLUTIONS</h4>
+            <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
+              <h4>ABOUT US</h4>
             </Link>
+            <Link to={"/ourdomain"} style={{ textDecoration: "none" }}>
+              <h4>OUR DOMAIN</h4>
+            </Link>
+            {/* <Link to={"/oursolutions"} style={{ textDecoration: "none" }}>
+              <h4>OUR SOLUTIONS</h4>
+            </Link> */}
+            <HoverDropdown />
           </div>
           <Link to={"/contactus"} style={{ textDecoration: "none" }}>
             <div className='get_a_quote'>
@@ -65,7 +71,8 @@ const Header = (props) => {
           ×
         </h4>
         <h4>About US</h4>
-        <h4>OUR SOLUTIONS</h4>
+
+        <HoverDropdown />
         <h4>OUR DOMAINS</h4>
       </div>
       <div id='main' className='main'>
