@@ -17,7 +17,7 @@ function OurDomain() {
             "Our goal is to automate and improve existing systems in place. We
             can employ our skill set to provide solutions in multiple domains."
           </p>
-          <button>Learn More</button>
+          <button>Learn Moree</button>
         </div>
       </div>
       <Separater description='Descover What we can do for your Business' />
