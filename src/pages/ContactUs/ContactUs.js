@@ -4,6 +4,7 @@ import ReactPhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./ContactUs.scss";
 import HoverDropdown from "../../components/HoverDropdown/hoverdropdown";
+import Footer from "../../components/Footer/footer";
 // const fetch =require('node-fetch');
 // const axios = require("axios");
 
@@ -144,6 +145,7 @@ class ContactUs extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
