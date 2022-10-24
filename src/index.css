@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
@@ -369,4 +370,10 @@ p {
     rgba(163, 1, 191, 1) 44%,
     rgba(217, 8, 170, 1) 57%
   );
+}
+
+.ant-btn {
+  border-radius: 45px;
+  height: 45px;
+  padding: 0 3em;
 }

@@ -5,6 +5,7 @@ import TickMark from "../../components/TickMark/tickmark";
 import { sliderData } from "../../slider-data";
 import { domainData } from "../../domain-data";
 import "./OurDomain.scss";
+import Footer from "../../components/Footer/footer";
 
 function OurDomain() {
   return (
@@ -215,6 +216,7 @@ function OurDomain() {
           "Giving judgments based on prior instances",
         ]}
       /> */}
+      <Footer />
     </>
   );
 }

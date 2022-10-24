@@ -4,6 +4,7 @@ import Separater from "../../components/Separater/separater";
 import UserCards from "../../components/usercard/usercard";
 import { sliderData } from "../../slider-data";
 import "./aboutus.scss";
+import Footer from "../../components/Footer/footer";
 
 // const founders = [
 //   { name: "Ahsan Ahmad", designation: "CEO" },
@@ -66,6 +67,7 @@ function AboutUs() {
           <span>Reliability</span>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
