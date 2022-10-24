@@ -3,6 +3,7 @@ import Section from "../../components/SectionDesign/Section";
 import Separater from "../../components/Separater/separater";
 import TickMark from "../../components/TickMark/tickmark";
 import { sliderData } from "../../slider-data";
+import { domainData } from "../../domain-data";
 import "./OurDomain.scss";
 
 function OurDomain() {
@@ -10,7 +11,7 @@ function OurDomain() {
     <>
       <Header background={true} />
       <div className='cover_aboutus'>
-        <img src={sliderData[1].image} />
+        <img src={sliderData[1].image} alt="" />
         <div>
           <h1>OUR DOMAIN</h1>
           <p>
@@ -20,10 +21,10 @@ function OurDomain() {
           <button>Learn Moree</button>
         </div>
       </div>
-      <Separater description='Descover What we can do for your Business' />
+      <Separater description='Discover What we can do for your Business' />
       <div className='section_style_image_left'>
         <div className='image_section'>
-          <img src={sliderData[1].image} />
+          <img src={domainData[0].image} alt=""/>
         </div>
         <div className=' text_section'>
           <h2>Finance</h2>
@@ -74,12 +75,12 @@ function OurDomain() {
           <button>Learn More</button>
         </div>
         <div className='image_section'>
-          <img src={sliderData[1].image} />
+          <img src={domainData[1].image} />
         </div>
       </div>
       <div className='section_style_image_left'>
         <div className='image_section'>
-          <img src={sliderData[1].image} />
+          <img src={domainData[2].image} />
         </div>
         <div className=' text_section'>
           <h2>Retail</h2>
@@ -127,7 +128,7 @@ function OurDomain() {
           <button>Learn More</button>
         </div>
         <div className='image_section'>
-          <img src={sliderData[1].image} />
+          <img src={domainData[3].image} />
         </div>
       </div>
       {/* <Section

@@ -5,32 +5,28 @@ import UserCards from "../../components/usercard/usercard";
 import { sliderData } from "../../slider-data";
 import "./aboutus.scss";
 
-const founders = [
-  { name: "Ahsan Ahmad", designation: "CEO" },
-  { name: "Arslan Mushtaq", designation: "Software Engineer" },
-  { name: "Shaheer", designation: "CTO" },
-];
+// const founders = [
+//   { name: "Ahsan Ahmad", designation: "CEO" },
+//   { name: "Arslan Mushtaq", designation: "Software Engineer" },
+//   { name: "Shaheer", designation: "CTO" },
+// ];
 
 function AboutUs() {
   return (
     <>
       <Header background={true} />
       <div className='cover_aboutus'>
-        <img src={sliderData[0].image} />
+        <img src={sliderData[1].image} alt=""/>
         <div>
-          <h1>About Us</h1>
+          <h1>About us</h1>
           <span />
+          <p>
+            "You imagine it, We will build it."
+          </p>
+          <button>Learn More</button>
         </div>
       </div>
-      {/* <Section
-        view='left'
-        section='view1'
-        overRide='0'
-        img={sliderData[0].image}
-        title='About Us'
-        description='You imagine it, We will build it. This is our motto. Our best quality is our work ethic, here at Digitalytics.in We provide the best service with utmost transparency and honesty. Our goal is to make sure our clients have no complaints regarding our work. '
-      /> */}
-      <Separater title='Our Team' />
+      {/* <Separater title='Our Team' />
       <div
         style={{
           display: "flex",
@@ -49,9 +45,17 @@ function AboutUs() {
             />
           );
         })}
-      </div>
-      <Separater title='Our Motto' />
-      <div className='motto'>
+      </div> */}
+      <Separater description='Why should you hire us?' />
+
+      <Section
+        view='left'
+        section='view1'
+        overRide='0'
+        title='You imagine it, We will build it.'
+        description='Our best quality is our work ethic, here at Digitalytics.in We provide the best service with utmost transparency and honesty. Our goal is to make sure our clients have no complaints regarding our work. '
+      />
+       <div className='motto'>
         <div>
           <span>Innovation</span>
         </div>
