@@ -61,7 +61,7 @@ const Slider = () => {
 
   return (
     <div>
-      <Header />
+      <Header page="home" />
       <div className='cover_image_pagination'>
         {sliderData.map((item, index) => (
           <button
